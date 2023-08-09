@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
+import { Container } from "./components/style/Container";
 
 // Basic Types
 // import { Greet } from "./components/Basic/Greet";
@@ -50,7 +51,7 @@ function App() {
       <Greet name="pooja" messageCount={10} isLoggedIn={true} /> */}
 
       {/* Events */}
-      <Button
+      {/* <Button
         handleClick={(event, id) => {
           console.log("Button Clicked", event, id);
         }}
@@ -58,7 +59,17 @@ function App() {
       <Input
         value=""
         handleChange={(event) => console.log(event.target.value)}
-      />
+      /> */}
+
+      {/* style prop */}
+      <Container
+        styles={{
+          background: "blue",
+          padding: "50px",
+          color: "#fff",
+          borderRadius: "20px",
+        }}
+      ></Container>
     </div>
   );
 }
