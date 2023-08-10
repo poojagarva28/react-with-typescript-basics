@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
+import LoggedIn from "./components/state/LoggedIn";
 import { Container } from "./components/style/Container";
 
 // Basic Types
@@ -62,14 +63,17 @@ function App() {
       /> */}
 
       {/* style prop */}
-      <Container
+      {/* <Container
         styles={{
           background: "blue",
           padding: "50px",
           color: "#fff",
           borderRadius: "20px",
-        }}
-      ></Container>
+        }}s
+      ></Container> */}
+
+      {/* state */}
+      <LoggedIn />
     </div>
   );
 }
