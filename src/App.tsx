@@ -2,6 +2,7 @@ import "./App.css";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import LoggedIn from "./components/state/LoggedIn";
+import User from "./components/state/User";
 import { Container } from "./components/style/Container";
 
 // Basic Types
@@ -74,6 +75,7 @@ function App() {
 
       {/* state */}
       <LoggedIn />
+      <User />
     </div>
   );
 }

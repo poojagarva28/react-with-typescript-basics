@@ -6,7 +6,7 @@ type AuthUser = {
 };
 
 const User = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser | null>({} as AuthUser);
 
   const loginhandler = () => {
     setUser({
@@ -14,13 +14,13 @@ const User = () => {
       email: "poojagarva123@gmail.com",
     });
   };
-  const logoutHandler = () => {
-    setUser(null);
-  };
+  //   const logoutHandler = () => {
+  //     setUser(null);
+  //   };
   return (
     <>
       <button onClick={loginhandler}>login</button>
-      <button onClick={logoutHandler}>log out</button>
+      {/* <button onClick={logoutHandler}>log out</button> */}
       <p>User name: {user?.name}</p>
       <p>User email: {user?.email}</p>
     </>
