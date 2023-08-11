@@ -1,6 +1,8 @@
 import "./App.css";
 import Box from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
+import Userr from "./components/context/User";
+import { UserContextProvider } from "./components/context/UserContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import Counter from "./components/state/Counter";
@@ -78,9 +80,14 @@ function App() {
       <Counter /> */}
 
       {/* context */}
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+
+      {/* context with future value */}
+      <UserContextProvider>
+        <Userr />
+      </UserContextProvider>
     </div>
   );
 }
