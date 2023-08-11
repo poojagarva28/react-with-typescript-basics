@@ -1,4 +1,6 @@
 import "./App.css";
+import Box from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import Counter from "./components/state/Counter";
@@ -42,7 +44,6 @@ function App() {
   return (
     <div className="App">
       {/* Basic Types */}
-
       {/* <Greet name="pooja" messageCount={20} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList personNames={personNames} />
@@ -52,7 +53,6 @@ function App() {
         <Heading>Pooja Garva</Heading>
       </Oscar>
       <Greet name="pooja" messageCount={10} isLoggedIn={true} /> */}
-
       {/* Events */}
       {/* <Button
         handleClick={(event, id) => {
@@ -63,7 +63,6 @@ function App() {
         value=""
         handleChange={(event) => console.log(event.target.value)}
       /> */}
-
       {/* style prop */}
       {/* <Container
         styles={{
@@ -73,11 +72,15 @@ function App() {
           borderRadius: "20px",
         }}s
       ></Container> */}
-
       {/* state */}
-      <LoggedIn />
+      {/* <LoggedIn />
       <User />
-      <Counter />
+      <Counter /> */}
+
+      {/* context */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
