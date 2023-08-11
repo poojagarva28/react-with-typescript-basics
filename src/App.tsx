@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
+import Counter from "./components/state/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
 import { Container } from "./components/style/Container";
@@ -76,6 +77,7 @@ function App() {
       {/* state */}
       <LoggedIn />
       <User />
+      <Counter />
     </div>
   );
 }
