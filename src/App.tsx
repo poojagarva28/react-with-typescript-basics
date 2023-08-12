@@ -5,6 +5,8 @@ import Userr from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
+import DomRef from "./components/ref/DomRef";
+import MutableRef from "./components/ref/MutableRef";
 import Counter from "./components/state/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
@@ -65,6 +67,7 @@ function App() {
         value=""
         handleChange={(event) => console.log(event.target.value)}
       /> */}
+
       {/* style prop */}
       {/* <Container
         styles={{
@@ -72,8 +75,9 @@ function App() {
           padding: "50px",
           color: "#fff",
           borderRadius: "20px",
-        }}s
+        }}
       ></Container> */}
+
       {/* state */}
       {/* <LoggedIn />
       <User />
@@ -85,9 +89,13 @@ function App() {
       </ThemeContextProvider> */}
 
       {/* context with future value */}
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <Userr />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      {/* useRef */}
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
