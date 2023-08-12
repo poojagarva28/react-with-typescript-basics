@@ -1,4 +1,6 @@
 import "./App.css";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 import Box from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Userr from "./components/context/User";
@@ -94,8 +96,11 @@ function App() {
       </UserContextProvider> */}
 
       {/* useRef */}
-      <DomRef />
-      <MutableRef />
+      {/* <DomRef />
+      <MutableRef /> */}
+
+      {/* componentprop */}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
