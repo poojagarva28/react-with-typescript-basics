@@ -7,6 +7,7 @@ import Userr from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
+import List from "./components/generics/List";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
 import Counter from "./components/state/Counter";
@@ -100,7 +101,29 @@ function App() {
       <MutableRef /> */}
 
       {/* componentprop */}
-      <Private isLoggedIn={true} component={Profile} />
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      {/* generics */}
+      {/* <List
+        items={["one", "two", "three"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List
+        items={[
+          {
+            id: 1,
+            firstName: "pooja",
+            lastName: "garva",
+          },
+          {
+            id: 2,
+            firstName: "gaurav",
+            lastName: "garva",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
