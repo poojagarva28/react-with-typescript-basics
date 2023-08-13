@@ -10,6 +10,7 @@ import { Input } from "./components/Events/Input";
 import List from "./components/generics/List";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
+import RandomNumber from "./components/restriction/RandomNumber";
 import Counter from "./components/state/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
@@ -109,7 +110,7 @@ function App() {
         onClick={(item) => console.log(item)}
       />
       <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
-      <List
+      {/* <List
         items={[
           {
             id: 1,
@@ -123,7 +124,10 @@ function App() {
           },
         ]}
         onClick={(item) => console.log(item)}
-      />
+      /> */}
+
+      {/* restriction */}
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
