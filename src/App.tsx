@@ -15,6 +15,7 @@ import Counter from "./components/state/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
 import { Container } from "./components/style/Container";
+import Toast from "./components/templateliterals/Toast";
 
 // Basic Types
 // import { Greet } from "./components/Basic/Greet";
@@ -127,7 +128,10 @@ function App() {
       /> */}
 
       {/* restriction */}
-      <RandomNumber value={10} isPositive />
+      {/* <RandomNumber value={10} isPositive /> */}
+
+      {/* template literals */}
+      <Toast position="center" />
     </div>
   );
 }
