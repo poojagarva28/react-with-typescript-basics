@@ -9,6 +9,7 @@ import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import List from "./components/generics/List";
 import CustomButton from "./components/html/button";
+import Text from "./components/polymorphic/Text";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
 import RandomNumber from "./components/restriction/RandomNumber";
@@ -135,12 +136,23 @@ function App() {
       {/* <Toast position="center" /> */}
 
       {/* html */}
-      <CustomButton
+      {/* <CustomButton
         variant="primary"
         onClick={() => console.log("button clicked")}
       >
         Primary Button
-      </CustomButton>
+      </CustomButton> */}
+
+      {/* polymorphic */}
+      <Text as="h1" color="primary">
+        Heading
+      </Text>
+      <Text as="p" color="secondary">
+        Paragraph
+      </Text>
+      <Text htmlFor="someId" as="label" color="primary" size="md">
+        Label
+      </Text>
     </div>
   );
 }
