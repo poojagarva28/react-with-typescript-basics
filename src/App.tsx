@@ -8,6 +8,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import List from "./components/generics/List";
+import CustomButton from "./components/html/button";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
 import RandomNumber from "./components/restriction/RandomNumber";
@@ -131,7 +132,15 @@ function App() {
       {/* <RandomNumber value={10} isPositive /> */}
 
       {/* template literals */}
-      <Toast position="center" />
+      {/* <Toast position="center" /> */}
+
+      {/* html */}
+      <CustomButton
+        variant="primary"
+        onClick={() => console.log("button clicked")}
+      >
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
